@@ -1,0 +1,18 @@
+python
+import random
+
+def handle_no_answer(query):
+    responses = [
+        "I'm sorry, I don't know the answer to that question.",
+        "I'm not sure about that. Can you ask something else?",
+        "I couldn't find an answer for that question. Can you try a different one?",
+        "I'm not sure about that. Can you ask something else?",
+        "I couldn't find an answer for that question. Can you try a different one?",
+    ]
+    return random.choice(responses)
+
+# Replace the following line in your code with the above function
+# response = qa_result({'query': query})
+response = final_result(query)
+if not response:
+    response = handle_no_answer(query)
